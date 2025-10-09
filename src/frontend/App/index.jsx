@@ -1,39 +1,21 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
-const SunAndMoonStyled = styled.div`
-    text-align: center;
-    h2 {
-        font-size: 30px;
-        color: teal;
-    }
-    img {
-        display: block;
-        margin: 30px auto;
-        padding: 20px;
-        border: solid 20px teal;
-        background-color: #013636;
-    }
-`;
+// components
+import AppRoutes from "./Routes";
+import Layout from "./Layout";
 
-const SunAndMoon = () => {
-    const [srcState, setsrcState] = useState("/assets/sunAndMoon/moon.png");
-    const changeToSun = () => {
-        setsrcState("/assets/sunAndMoon/sun.png");
-    };
-    const changeToMoon = () => {
-        setsrcState("/assets/sunAndMoon/moon.png");
-    };
+// component
+const App = () => {
     return (
-        <SunAndMoonStyled>
-            <h2>Sun And Moon</h2>
-            <img
-                src={srcState}
-                alt="Sun And Moon"
-                onMouseEnter={changeToSun}
-                onMouseLeave={changeToMoon}
-            />
-        </SunAndMoonStyled>
+        <BrowserRouter>
+            <HelmetProvider>
+                <Layout>
+                    <AppRoutes />
+                </Layout>
+            </HelmetProvider>
+        </BrowserRouter>
     );
 };
-export default SunAndMoon;
+
+export default App;
