@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "@App/Pages/Home";
 import Staff from "@App/Pages/Staff";
 import Contact from "@App/Pages/Contact";
-import CourseWork from "@App/Pages/CourseWork/index.jsx";
+import CourseWork from "@App/Pages/Course-Work/index.jsx";
 
 // component
 const AppRoutes = () => {
