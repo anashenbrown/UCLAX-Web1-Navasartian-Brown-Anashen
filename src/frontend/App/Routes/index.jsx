@@ -3,10 +3,11 @@ import { Routes, Route } from "react-router-dom";
 // page components
 import Home from "@App/Pages/Home";
 import Staff from "@App/Pages/Staff";
+import StaffMember from "@App/Pages/Staff/StaffMember";
 import Contact from "@App/Pages/Contact";
 
 // Course Work Routes
-import CourseWork from "@App/Pages/CourseWork/index.jsx";
+import CourseWork from "@App/Pages/CourseWork";
 import Assignments from "@App/Pages/CourseWork/Assignments";
 import SunAndMoon from "@App/Pages/CourseWork/SunAndMoon";
 import Responsive from "@App/Pages/CourseWork/Responsive";
@@ -15,8 +16,11 @@ import Responsive from "@App/Pages/CourseWork/Responsive";
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route element={<Home />} index="" />
-            <Route element={<Staff />} path="/staff" />
+            <Route element={<Home />} index />
+            <Route path="/staff">
+                <Route element={<Staff />} path="" />
+                <Route element={<StaffMember />} path=":staffId" />
+            </Route>
             <Route element={<Contact />} path="/contact" />
             <Route element={<CourseWork />} path="/course-work/">
                 <Route element={<Assignments />} path="" />

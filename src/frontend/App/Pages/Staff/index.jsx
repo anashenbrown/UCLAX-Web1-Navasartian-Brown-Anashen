@@ -1,12 +1,17 @@
 //component
 import Meta from "@App/Core/components/Meta";
+import Inset from "@App/Layout/Inset";
+import StaffList from "./StaffList";
 
 // component
 const Staff = () => {
     return (
         <main>
-            <Meta pageTitle="staff" />
-            <h1>Staff</h1>
+            <Inset>
+                <Meta pageTitle="staff" />
+                <h1>Staff</h1>
+                <StaffList />
+            </Inset>
         </main>
     );
 };
