@@ -27,7 +27,6 @@ const StaffMember = () => {
     useEffect(() => {
         const fetchStaffMember = async () => {
             const resp = await axios.get(`/staff/${staffId}`);
-            console.log({ resp });
             setMembers(resp.data);
         };
 
