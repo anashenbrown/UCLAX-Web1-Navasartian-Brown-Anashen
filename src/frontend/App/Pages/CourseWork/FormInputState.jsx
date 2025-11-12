@@ -5,13 +5,13 @@ import styled from "styled-components";
 import Input from "@App/Core/components/Form/Inputs/Input";
 
 //styles
-const ForminputStateStyled = styled.div`
+const FormInputStateStyled = styled.div`
     padding: 20px;
     background-color: ${({ theme }) => theme.colors.primary.default};
 `;
 
 // component
-const ForminputState = () => {
+const FormInputState = () => {
     const [value, setValue] = useState("");
     const formInput = {
         id: "userName",
@@ -28,11 +28,11 @@ const ForminputState = () => {
     return (
         <div>
             <h2>Form Input State</h2>
-            <ForminputStateStyled>
+            <FormInputStateStyled>
                 <Input formInput={formInput} onChange={onChange} />
-            </ForminputStateStyled>
+            </FormInputStateStyled>
         </div>
     );
 };
 
-export default ForminputState;
+export default FormInputState;
