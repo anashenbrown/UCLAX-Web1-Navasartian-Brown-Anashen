@@ -1,7 +1,7 @@
 import { actionTypes } from "./actionTypes";
 
 export const createActions = (state, dispatch) => {
-    const setformInputs = (formInputs) => {
+    const setFormInputs = (formInputs) => {
         dispatch({
             type: actionTypes.SET_FORM_INPUTS,
             formInputs,
@@ -12,7 +12,7 @@ export const createActions = (state, dispatch) => {
         const formInputs = state.formInputs.map((input) => {
             return formInput.id === input.id ? formInput : input;
         });
-        setformInputs(formInputs);
+        setFormInputs(formInputs);
     };
 
     const setFormStatus = (formStatus) => {
@@ -29,7 +29,7 @@ export const createActions = (state, dispatch) => {
     };
 
     return {
-        setformInputs,
+        setFormInputs,
         setFormInput,
         setFormStatus,
         setGlobalMessage,
