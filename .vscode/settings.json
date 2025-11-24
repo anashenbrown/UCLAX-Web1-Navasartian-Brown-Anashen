@@ -30,7 +30,7 @@
     "typescript.suggest.autoImports": false,
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
-    "workbench.layoutControl.enabled": false,
+    "workbench.layoutControl.enabled": true,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -71,7 +71,7 @@
     "jest.autoRun": {
         "watch": false
     },
-    "window.commandCenter": false,
+    "window.commandCenter": true,
     "window.zoomLevel": 2,
     "workbench.editor.empty.hint": "hidden",
     "git.defaultBranchName": "master",
