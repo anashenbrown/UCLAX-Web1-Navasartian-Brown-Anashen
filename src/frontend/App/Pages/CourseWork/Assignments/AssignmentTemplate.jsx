@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // components
 import Markdown from "@App/Core/components/Markdown";
+
 // styles
 const AssignmentTemplateStyled = styled.div`
     padding: 20px;
